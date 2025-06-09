@@ -316,10 +316,10 @@ export default function SearchPage() {
                   <Card>
                     <CardHeader>
                       <CardTitle>Recently Used Guides</CardTitle>
-                      <CardDescription>Guides you've accessed in the last 30 days</CardDescription>
+                      <CardDescription>Guides you&apos;ve accessed in the last 30 days</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <p>You haven't accessed any guides recently.</p>
+                      <p>You haven&apos;t accessed any guides recently.</p>
                     </CardContent>
                   </Card>
                 </TabsContent>
@@ -331,7 +331,7 @@ export default function SearchPage() {
                       <CardDescription>Your saved search filters</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <p>You don't have any saved searches yet.</p>
+                      <p>You don&apos;t have any saved searches yet.</p>
                     </CardContent>
                   </Card>
                 </TabsContent>

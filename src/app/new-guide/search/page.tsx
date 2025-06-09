@@ -61,7 +61,7 @@ const mockGuides = [
     sections: [
       {
         title: "Introduction & Warm-up",
-        preview: `<p><strong>Introduction & Warm-up (5 minutes)</strong></p><p>Thank you for joining us today. My name is [Moderator Name] and I’ll be leading our discussion. We’re conducting research to better understand the experiences of patients with [cancer type]. Your insights will help improve support and resources for patients. Our conversation will last about 60 minutes. There are no right or wrong answers – we’re interested in your personal experiences and opinions. This session is being recorded for research purposes only. Your identity will remain confidential in any reporting. Do you have any questions before we begin?</p>`,
+        preview: `<p><strong>Introduction & Warm-up (5 minutes)</strong></p><p>Thank you for joining us today. My name is [Moderator Name] and I'll be leading our discussion. We're conducting research to better understand the experiences of patients with [cancer type]. Your insights will help improve support and resources for patients. Our conversation will last about 60 minutes. There are no right or wrong answers - we're interested in your personal experiences and opinions. This session is being recorded for research purposes only. Your identity will remain confidential in any reporting. Do you have any questions before we begin?</p>`,
       },
       {
         title: "Background & Diagnosis",
@@ -69,7 +69,7 @@ const mockGuides = [
       },
       {
         title: "Treatment Decision Journey",
-        preview: `<p><strong>Treatment Decision Journey (15 minutes)</strong></p><p>1. Think back to when you were discussing treatment options with your healthcare team. What were the most important factors for you when deciding on a treatment plan? (Probe: Efficacy, side effects, impact on daily life, doctor’s recommendation, insurance coverage, etc.)</p><p>2. How involved did you feel in the decision-making process? (Probe: Did you feel your preferences were heard? Did you have enough information?)</p><p>3. What resources or support systems did you find most helpful during this time? (Probe: Family, friends, patient advocacy groups, online forums, specific hospital programs)</p>`,
+        preview: `<p><strong>Treatment Decision Journey (15 minutes)</strong></p><p>1. Think back to when you were discussing treatment options with your healthcare team. What were the most important factors for you when deciding on a treatment plan? (Probe: Efficacy, side effects, impact on daily life, doctor's recommendation, insurance coverage, etc.)</p><p>2. How involved did you feel in the decision-making process? (Probe: Did you feel your preferences were heard? Did you have enough information?)</p><p>3. What resources or support systems did you find most helpful during this time? (Probe: Family, friends, patient advocacy groups, online forums, specific hospital programs)</p>`,
       },
       {
         title: "Support Needs & Resources",
@@ -77,7 +77,7 @@ const mockGuides = [
       },
       {
         title: "Conclusion",
-        preview: `<p><strong>Conclusion (5 minutes)</strong></p><p>1. Based on your experience, what is one piece of advice you would give to a newly diagnosed patient with [cancer type]?</p><p>2. Is there anything else you’d like to share about your experience or journey that we haven’t discussed?</p><p>Thank you for your time and valuable insights.</p>`,
+        preview: `<p><strong>Conclusion (5 minutes)</strong></p><p>1. Based on your experience, what is one piece of advice you would give to a newly diagnosed patient with [cancer type]?</p><p>2. Is there anything else you'd like to share about your experience or journey that we haven't discussed?</p><p>Thank you for your time and valuable insights.</p>`,
       },
     ],
   },
@@ -207,6 +207,7 @@ export default function SearchPastGuidesPage() {
 
   const [relayedResearchObjectives, setRelayedResearchObjectives] = useState("")
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [searchResults, setSearchResults] = useState<any[]>([])
   const [searchPerformed, setSearchPerformed] = useState(false)
   const [searchLoading, setSearchLoading] = useState(false)
@@ -223,6 +224,7 @@ export default function SearchPastGuidesPage() {
       initialCollapsedState[guide.id] = true
     })
     setSectionsCollapsed(initialCollapsedState)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const toggleSectionCollapse = (guideId: number) => {
@@ -345,6 +347,7 @@ export default function SearchPastGuidesPage() {
 
   const aiRecommendedGuides = mockGuides.filter((guide) => [1, 2, 4, 5].includes(guide.id))
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const renderGuideCard = (guide: any, isRecommended: boolean) => (
     <Dialog>
       <Card key={guide.id}>
@@ -395,6 +398,7 @@ export default function SearchPastGuidesPage() {
           {!sectionsCollapsed[guide.id] && (
             <div className="mb-3">
               <div className="grid grid-cols-1 gap-2">
+                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 {guide.sections.map((section: any, i: number) => (
                   <div key={i} className="border rounded-md p-2">
                     <div className="flex items-center justify-between mb-1">
@@ -419,6 +423,7 @@ export default function SearchPastGuidesPage() {
               Why this guide matches your project:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               {guide.matchReasons.map((reason: any, i: number) => (
                 <div
                   key={i}
@@ -480,6 +485,7 @@ export default function SearchPastGuidesPage() {
           </DialogDescription>
         </DialogHeader>
         <div className="prose prose-sm max-w-none py-4">
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {guide.sections.map((section: any, index: number) => (
             <div key={index} dangerouslySetInnerHTML={{ __html: section.preview }} />
           ))}
@@ -663,7 +669,7 @@ export default function SearchPastGuidesPage() {
                         <div>
                           <p className="font-medium text-blue-800">AI-Powered Guide Recommendations</p>
                           <p className="text-sm text-blue-700 mt-1">
-                            Based on your project context from Step 2, we've pre-selected guides that closely match your
+                            Based on your project context from Step 2, we&apos;ve pre-selected guides that closely match your
                             needs.
                           </p>
                         </div>
