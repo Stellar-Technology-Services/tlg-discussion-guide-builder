@@ -34,16 +34,16 @@ export default function SignIn() {
     <div className="flex min-h-screen flex-col">
       {/* Header with company branding - matches main app layout */}
       <header className="border-b bg-background/95 backdrop-blur">
-        <div className="container flex h-16 items-center py-4">
+        <div className="container mx-auto flex h-16 items-center py-4">
           <Link href="/">
             <div className="flex items-center gap-2">
               {/* Company logo with optimized loading */}
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TLGLogo-tQcs9nfk15k8ksX7MOj3NlZ7JGLU4o.svg"
+                src="/images/tlg-logo-large.svg"
                 alt="The Link Group Logo"
                 width={180}
                 height={40}
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
               {/* App title for context */}
               <h1 className="text-xl font-bold">Discussion Guide Builder</h1>

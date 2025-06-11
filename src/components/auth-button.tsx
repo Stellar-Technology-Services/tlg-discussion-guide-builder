@@ -28,7 +28,7 @@ export default function AuthButton() {
         {/* User greeting with fallback display name */}
         <div className="hidden sm:flex items-center gap-2 text-sm text-muted-foreground">
           <User className="h-4 w-4" />
-          <span>Welcome, {session.user?.name || session.user?.email || 'User'}</span>
+          <span>{session.user?.name || session.user?.email || 'User'}</span>
         </div>
         
         {/* Sign out button with confirmation through NextAuth */}
