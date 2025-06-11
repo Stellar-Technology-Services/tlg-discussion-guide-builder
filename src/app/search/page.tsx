@@ -19,7 +19,7 @@ export default function SearchPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur">
-        <div className="container flex h-16 items-center justify-between py-4">
+        <div className="container mx-auto flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <Link href="/">
               <Button variant="ghost" size="icon">
@@ -28,11 +28,11 @@ export default function SearchPage() {
             </Link>
             <div className="flex items-center gap-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TLGLogo-tQcs9nfk15k8ksX7MOj3NlZ7JGLU4o.svg"
+                src="/images/tlg-logo-large.svg"
                 alt="The Link Group Logo"
                 width={180}
                 height={40}
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
               <span className="text-xl font-bold">| Search Discussion Guides</span>
             </div>
@@ -50,7 +50,7 @@ export default function SearchPage() {
         </div>
       </header>
 
-      <main className="flex-1 container py-6">
+      <main className="flex-1 container mx-auto py-6">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-4">
             <div className="flex-1">

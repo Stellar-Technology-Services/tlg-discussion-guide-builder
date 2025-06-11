@@ -98,7 +98,7 @@ export default function OutlineConfirmationPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur">
-        <div className="container flex h-16 items-center justify-between py-4">
+        <div className="container mx-auto flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <Link href="/new-guide/search">
               <Button variant="ghost" size="icon">
@@ -108,11 +108,11 @@ export default function OutlineConfirmationPage() {
             <Link href="/">
               <div className="flex items-center gap-2">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TLGLogo-tQcs9nfk15k8ksX7MOj3NlZ7JGLU4o.svg"
+                  src="/images/tlg-logo-large.svg"
                   alt="The Link Group Logo"
                   width={180}
                   height={40}
-                  className="h-8 w-auto"
+                  className="h-10 w-auto"
                 />
                 <span className="text-xl font-bold">| Guide Builder</span>
               </div>
@@ -132,7 +132,7 @@ export default function OutlineConfirmationPage() {
         </div>
       </header>
 
-      <main className="flex-1 container py-6">
+      <main className="flex-1 container mx-auto py-6">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold mb-2">Suggested Guide Outline</h2>
           <div className="flex justify-between items-center mb-6">
