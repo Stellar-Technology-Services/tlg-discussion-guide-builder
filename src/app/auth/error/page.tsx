@@ -33,7 +33,7 @@ export default function AuthError() {
           <Link href="/">
             <div className="flex items-center gap-2">
               {/* Company logo with optimized loading */}
-              <Image
+              <img
                 src="/images/tlg-logo-large.svg"
                 alt="The Link Group Logo"
                 width={180}

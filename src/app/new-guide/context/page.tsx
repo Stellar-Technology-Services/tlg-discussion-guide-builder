@@ -56,7 +56,7 @@ export default function ProjectContextPage() {
             </Link>
             <Link href="/">
               <div className="flex items-center gap-2">
-                <Image
+                <img
                   src="/images/tlg-logo-large.svg"
                   alt="The Link Group Logo"
                   width={180}
